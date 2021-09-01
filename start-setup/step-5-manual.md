@@ -40,3 +40,5 @@ Goto Screen Saver > Diable it
 - Conventional Commit
 - SonarLint
 - MapStruct
+- Env
+- Atom Icons

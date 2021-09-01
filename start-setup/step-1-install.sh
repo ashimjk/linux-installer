@@ -82,6 +82,10 @@ echo "\n\nInstalling Postman"
 echo "--------------------------------------"
 sudo snap install postman
 
+echo "\n\nInstalling DrawIO"
+echo "--------------------------------------"
+sudo snap install drawio
+
 echo "\n\nInstalling Zsh"
 echo "--------------------------------------"
 sudo apt install zsh -y
@@ -150,3 +154,11 @@ echo "\n\nInstalling Telepresence"
 echo "--------------------------------------"
 sudo curl -fL https://app.getambassador.io/download/tel2/linux/amd64/latest/telepresence -o /usr/local/bin/telepresence
 sudo chmod a+x /usr/local/bin/telepresence
+
+
+echo "\n\nInstalling Python"
+echo "--------------------------------------"
+sudo apt install -y python3
+sudo apt install -y python3-pip
+sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+sudo apt install -y python3-venv
