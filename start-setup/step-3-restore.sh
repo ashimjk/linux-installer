@@ -62,6 +62,7 @@ mkdir -p $RESTORE_PATH/.kube
 cp $BACKUP_PATH/.kube/config $RESTORE_PATH/.kube/config
 cp $BACKUP_PATH/.kube/config-k $RESTORE_PATH/.kube/config-k
 cp $BACKUP_PATH/.kube/config-o $RESTORE_PATH/.kube/config-o
+chmod 600 $RESTORE_PATH/.kube/config
 
 
 echo "Restore Maven"

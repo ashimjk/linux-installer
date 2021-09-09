@@ -126,12 +126,12 @@ base=https://github.com/docker/machine/releases/download/v0.16.0 \
 
 echo "\n\nInstalling Helm"
 echo "--------------------------------------"
-wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
-tar -zxvf helm-v2.14.3-linux-amd64.tar.gz
+wget https://get.helm.sh/helm-v3.7.0-rc.2-linux-amd64.tar.gz
+tar -zxvf helm-v3.7.0-rc.2-linux-amd64.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/helm
 
 rm -rf linux-amd64
-rm -rf helm-v2.14.3-linux-amd64.tar.gz
+rm -rf helm-v3.7.0-rc.2-linux-amd64.tar.gz
 
 
 echo "\n\nInstalling K6"
