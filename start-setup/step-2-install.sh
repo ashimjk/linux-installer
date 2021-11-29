@@ -1,4 +1,6 @@
 #!/bin/zsh
+JDK_8_VERSION=8.0.292.j9-adpt
+JDK_11_VERSION=11.0.11.j9-adpt
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -6,12 +8,12 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 echo "Installing JDK 8"
 echo "--------------------------------------"
-sdk install java 8.0.292.j9-adpt
+sdk install java ${JDK_8_VERSION}
 
 
 echo "\n\nInstalling JDK 11 (Blocker)"
 echo "--------------------------------------"
-sdk install java 11.0.11.j9-adpt
+sdk install java ${JDK_11_VERSION}
 
 
 echo "\n\nInstalling Maven"

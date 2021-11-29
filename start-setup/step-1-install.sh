@@ -1,3 +1,7 @@
+DOCKER_COMPOSE_VERSION=v2.1.1
+DOCKER_MACHINE_VERSION=v0.16.2
+HELM_VERSION=v3.7.1
+
 echo "Updating Ubuntu Cache"
 echo "--------------------------------------"
 sudo apt update
@@ -112,13 +116,13 @@ sudo usermod -aG docker $USER
 
 echo "\n\nInstalling Docker-Compose"
 echo "--------------------------------------"
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 
 echo "\n\nInstalling Docker-Machine"
 echo "--------------------------------------"
-base=https://github.com/docker/machine/releases/download/v0.16.0 \
+base=https://github.com/docker/machine/releases/download/${DOCKER_MACHINE_VERSION} \
   && curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine \
   && sudo mv /tmp/docker-machine /usr/local/bin/docker-machine \
   && chmod +x /usr/local/bin/docker-machine
@@ -126,12 +130,12 @@ base=https://github.com/docker/machine/releases/download/v0.16.0 \
 
 echo "\n\nInstalling Helm"
 echo "--------------------------------------"
-wget https://get.helm.sh/helm-v3.7.0-rc.2-linux-amd64.tar.gz
-tar -zxvf helm-v3.7.0-rc.2-linux-amd64.tar.gz
+wget https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz
+tar -zxvf helm-${HELM_VERSION}-linux-amd64.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/helm
 
 rm -rf linux-amd64
-rm -rf helm-v3.7.0-rc.2-linux-amd64.tar.gz
+rm -rf helm-${HELM_VERSION}-linux-amd64.tar.gz
 
 
 echo "\n\nInstalling K6"

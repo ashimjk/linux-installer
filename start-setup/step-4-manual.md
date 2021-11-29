@@ -1,11 +1,17 @@
 # Manual Installation
 
+
+## Spaceship Theme, Auto-Suggestions and Syntax-Highlighting
 ```sh
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1;
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme";
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions;
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting;
 ```
+
+Now, set `ZSH_THEME="spaceship"` in your .zshrc
+Add `zsh-autosuggestions` in plugins
+Add `zsh-syntax-highlighting` in plugins
 
 
 ## Copy Zshrc Files
@@ -16,12 +22,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}
 ## Install NVM and Angular
 ```
 nvm install 12.19.0;
-npm install -g @angular/cli@11.2.14;
+npm install -g @angular/cli@11.2.15;
 ```
+
 
 ## Setup Github Cli
 Login : `gh auth login`
-ghp_HiXSef7a9U1sFC0hJ4xi8m53LcyQdr0uZld
 ZSH Completion : `gh completion -s zsh > ~/.oh-my-zsh/completions/_gh`
 
 
@@ -41,6 +47,12 @@ ZSH Completion : `gh completion -s zsh > ~/.oh-my-zsh/completions/_gh`
 
 
 ## Configure DataGrip
+- codestyles
+- keymaps
+- templates
+
+
+## Configure PyCharm
 - codestyles
 - keymaps
 - templates

@@ -4,7 +4,7 @@ read -p 'Backup Directory : ' backupvar
 
 INTELLIJ="IntelliJIdea2021.1"
 WEBSTORM="WebStorm2021.2"
-PYSTORM=""
+PYCHARM="PyCharm2021.2"
 DATAGRIP="DataGrip2021.2"
 
 BACKUP_PATH=$backupvar
@@ -54,6 +54,17 @@ mkdir -p $BACKUP_PATH/.config/JetBrains/$DATAGRIP/templates
 cp ~/.config/JetBrains/$DATAGRIP/codestyles/AJK-Style.xml $BACKUP_PATH/.config/JetBrains/$DATAGRIP/codestyles/AJK-Style.xml
 cp ~/.config/JetBrains/$DATAGRIP/keymaps/AJK-Keymap.xml $BACKUP_PATH/.config/JetBrains/$DATAGRIP/keymaps/AJK-Keymap.xml
 cp ~/.config/JetBrains/$DATAGRIP/templates/user.xml $BACKUP_PATH/.config/JetBrains/$DATAGRIP/templates/user.xml
+
+
+echo "Backup PyCharm"
+# --------------------------------------
+mkdir -p $BACKUP_PATH/.config/JetBrains/$PYCHARM/codestyles
+mkdir -p $BACKUP_PATH/.config/JetBrains/$PYCHARM/keymaps
+mkdir -p $BACKUP_PATH/.config/JetBrains/$PYCHARM/templates
+
+cp ~/.config/JetBrains/$PYCHARM/codestyles/AJK-Style.xml $BACKUP_PATH/.config/JetBrains/$PYCHARM/codestyles/AJK-Style.xml
+cp ~/.config/JetBrains/$PYCHARM/keymaps/AJK-Keymap.xml $BACKUP_PATH/.config/JetBrains/$PYCHARM/keymaps/AJK-Keymap.xml
+cp ~/.config/JetBrains/$PYCHARM/templates/user.xml $BACKUP_PATH/.config/JetBrains/$PYCHARM/templates/user.xml
 
 
 echo "Backup Konsole"
@@ -125,6 +136,11 @@ echo "Backup Zshrc"
 # --------------------------------------
 cp ~/.zsh_history $BACKUP_PATH
 cp ~/.zshrc $BACKUP_PATH
+
+
+echo "MTool"
+# --------------------------------------
+cp ~/.mtool.py $BACKUP_PATH
 
 
 echo "Backup Tools"

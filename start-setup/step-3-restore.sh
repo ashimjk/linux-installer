@@ -3,11 +3,6 @@
 read -p 'Backup Directory : ' backupvar
 read -p 'Restore Directory : ' restorevar
 
-INTELLIJ="IntelliJIdea2021.1"
-WEBSTORM="WebStorm2021.2"
-PYSTORM=""
-DATAGRIP="DataGrip2021.2"
-
 BACKUP_PATH=$backupvar
 RESTORE_PATH=$restorevar
 
@@ -95,6 +90,11 @@ cp $BACKUP_PATH/.npmrc $RESTORE_PATH
 echo "Restore Vimrc"
 # --------------------------------------
 cp $BACKUP_PATH/.vimrc $RESTORE_PATH
+
+
+echo "MTool"
+# --------------------------------------
+cp $BACKUP_PATH/.mtool.py $RESTORE_PATH
 
 
 echo "Backup Tools"
