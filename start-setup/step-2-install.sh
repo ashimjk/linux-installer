@@ -43,7 +43,7 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 echo "\n\nInstalling Kube-PS1"
 wget https://raw.githubusercontent.com/jonmosco/kube-ps1/master/kube-ps1.sh
-chmox +x kube-ps1.sh
+chmod +x kube-ps1.sh
 mv kube-ps1.sh ~/.oh-my-zsh/tools/kube-ps1.sh
 
 
@@ -55,12 +55,12 @@ chmod +x kubens
 mv kubectx ~/.oh-my-zsh/tools/kubectx
 mv kubens ~/.oh-my-zsh/tools/kubens
 
-wget https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubectx.zsh
-wget https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubens.zsh
+wget https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubectx.zsh
+wget https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubens.zsh
 
 mkdir -p ~/.oh-my-zsh/completions
-mv kubectx.zsh ~/.oh-my-zsh/completions/_kubectx.zsh
-mv kubens.zsh ~/.oh-my-zsh/completions/_kubens.zsh
+mv _kubectx.zsh ~/.oh-my-zsh/completions/_kubectx.zsh
+mv _kubens.zsh ~/.oh-my-zsh/completions/_kubens.zsh
 
 
 echo "\n\nInstalling Webstorm File Watcher"
