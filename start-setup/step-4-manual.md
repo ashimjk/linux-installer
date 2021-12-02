@@ -38,6 +38,7 @@ ZSH Completion : `gh completion -s zsh > ~/.oh-my-zsh/completions/_gh`
 ## Configure Intellij
 - codestyles
 - keymaps
+- templates
 
 
 ## Configure Webstorm

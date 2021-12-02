@@ -29,9 +29,11 @@ echo "Backup Intellij"
 # --------------------------------------
 mkdir -p $BACKUP_PATH/.config/JetBrains/$INTELLIJ/codestyles
 mkdir -p $BACKUP_PATH/.config/JetBrains/$INTELLIJ/keymaps
+mkdir -p $BACKUP_PATH/.config/JetBrains/$INTELLIJ/templates
 
 cp ~/.config/JetBrains/$INTELLIJ/codestyles/AJK-Style.xml $BACKUP_PATH/.config/JetBrains/$INTELLIJ/codestyles/AJK-Style.xml
 cp ~/.config/JetBrains/$INTELLIJ/keymaps/AJK-Keymap.xml $BACKUP_PATH/.config/JetBrains/$INTELLIJ/keymaps/AJK-Keymap.xml
+cp ~/.config/JetBrains/$INTELLIJ/templates/user.xml $BACKUP_PATH/.config/JetBrains/$INTELLIJ/templates/user.xml
 
 
 echo "Backup Webstorm"
