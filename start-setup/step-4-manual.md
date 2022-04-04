@@ -22,7 +22,7 @@ Add `zsh-syntax-highlighting` in plugins
 ## Install NVM and Angular
 ```
 nvm install 12.19.0;
-npm install -g @angular/cli@11.2.15;
+npm install -g @angular/cli@11.2.19;
 ```
 
 
